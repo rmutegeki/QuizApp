@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="app_heading">Know your Java!</string>
+    <string name="image_discription">A Java Coffee Cup</string>
+    <string name="q1_text">Q1. Which of these are valid keywords in Java? (Choose 2)</string>
+    <string name="q1_option1">double</string>
+    <string name="q1_option2">Int</string>
+    <string name="q1_option3">Float</string>
+    <string name="q1_option4">string</string>
+    <string name="q2_text">Q2. Which of these legally declare, construct, and initialize an array?</string>
+    <string name="q2_option1">int [ ] myList = (5, 8, 2);</string>
+    <string name="q2_option2">int myList [ ] = {4, 3, 7};</string>
+    <string name="q2_option3">int myList [ ] [ ] = {4,9,7,0};</string>
+    <string name="q2_option4">int [ ] myList = {1, 2, 3};</string>
+    <string name="q3_text">Q3. Which one of these lists contains only Java programming language keywords?</string>
+    <string name="q3_option1">class, if, void, long, Int, continue</string>
+    <string name="q3_option2">byte, break, assert, switch, include</string>
+    <string name="q3_option3">try, virtual, throw, final, volatile, transient</string>
+    <string name="q3_option4">goto, instanceof, native, finally, default, throws</string>
+    <string name="q4_text">Q4. Write the Java Code to declare a string s and initialize it to \"I Love Java\"?</string>
+    <string name="q4_hint_text">Write your Code Here</string>
+    <string name="q5_text">Q5. Which of these is a valid declaration of a boolean?</string>
+    <string name="q5_option1">boolean b = false;</string>
+    <string name="q5_option2">boolean b = 0;</string>
+    <string name="q5_option3">boolean b = Boolean.false();</string>
+    <string name="q5_option4">boolean b = \'false\';</string>
+    <string name="did_you_enjoy">Did you enjoy the quiz?</string>
+    <string name="yes_response">Yes</string>
+    <string name="nope_response">Nope</string>
+    <string name="name_hint">Name</string>
+    <string name="view_result_button">View Result</string>
+    <string name="email_result_button">Email Result</string>
+</resources>
