@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //The user's Provided name. It falls back to "User" by default
-    private String name = "User";
+    //The user's Provided name. It falls back to "User" by default in case someone doesn't provide one
+    private String mName = "User";
 
 
     @Override
@@ -55,30 +55,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @return the score of the users based on the questions that have been answered and passed.
+     * @return int score, the score of the user based on the questions that have been answered and passed.
      */
     private int getScore() {
         int score = 0;
-        if (passedQuestion1()) {
+        if (passedQuestion1())
             score += 1;
-        }
-        if (passedQuestion2()) {
+        if (passedQuestion2())
             score += 1;
-        }
-        if (passedQuestion3()) {
+        if (passedQuestion3())
             score += 1;
-        }
-        if (passedQuestion4()) {
+        if (passedQuestion4())
             score += 1;
-        }
-        if (passedQuestion5()) {
+        if (passedQuestion5())
             score += 1;
-        }
+
         return score;
     }
 
     /**
-     * @return the Text with the result of the user
+     * @return String dispalyText, the Text with the result of the user
      */
 
     private String displayText() {
@@ -100,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
         if (passedQuestion5())
             q5 = "Passed";
 
-        //name provided by the user
+        //Retrieve the name provided by the user in the name text field
         EditText nameText = findViewById(R.id.name);
         if (nameText.getText().toString().length() >= 1)
-            name = nameText.getText().toString();
+            mName = nameText.getText().toString();
 
         RadioButton enjoyed = findViewById(R.id.enjoyed_yes);
         RadioButton enjoyedNot = findViewById(R.id.enjoyed_no);
@@ -112,21 +108,21 @@ public class MainActivity extends AppCompatActivity {
 
         //check whether the user enjoyed the Quiz or not and adjusts the displayed message accordingly
         if (enjoyed.isChecked()) {
-            displayText = "Hello " + name + ", \n\nYou Scored " + getScore() + "/5. \nI am glad that you enjoyed my Quiz.\n\nDetailed Score:\n" +
+            displayText = "Hello " + mName + ", \n\nYou Scored " + getScore() + "/5. \nI am glad that you enjoyed my Quiz.\n\nDetailed Score:\n" +
                     "Qn. 1: " + q1 + ".\n" +
                     "Qn. 2: " + q2 + ".\n" +
                     "Qn. 3: " + q3 + ".\n" +
                     "Qn. 4: " + q4 + ".\n" +
                     "Qn. 5: " + q5 + ".";
         } else if (enjoyedNot.isChecked()) {
-            displayText = "Hello " + name + ", \n\nYou Scored " + getScore() + "/5. \nI am sorry that you were not able to enjoy my Quiz. I'll Keep trying to improve it.\n\nDetailed Score:\n" +
+            displayText = "Hello " + mName + ", \n\nYou Scored " + getScore() + "/5. \nI am sorry that you were not able to enjoy my Quiz. I'll Keep trying to improve it.\n\nDetailed Score:\n" +
                     "Qn. 1: " + q1 + ".\n" +
                     "Qn. 2: " + q2 + ".\n" +
                     "Qn. 3: " + q3 + ".\n" +
                     "Qn. 4: " + q4 + ".\n" +
                     "Qn. 5: " + q5 + ".";
         } else {
-            displayText = "Hello " + name + ", \n\nYou Scored " + getScore() + "/5. \nYou forgot to let me know how you feel about my Quiz though.\n\nDetailed Score:\n" +
+            displayText = "Hello " + mName + ", \n\nYou Scored " + getScore() + "/5. \nYou forgot to let me know how you feel about my Quiz though.\n\nDetailed Score:\n" +
                     "Qn. 1: " + q1 + ".\n" +
                     "Qn. 2: " + q2 + ".\n" +
                     "Qn. 3: " + q3 + ".\n" +
